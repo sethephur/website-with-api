@@ -62,8 +62,16 @@ section {
 }
 
 .item-card button {
-  width: max-content;
+  background-color: #dbdbdb;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
   margin: 1rem auto;
+  font-size: 2rem;
+  line-height: 2.2;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

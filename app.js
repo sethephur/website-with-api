@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      items = data.slice(0, 200); // Limit to 30 items
+      items = data.slice(0, 200);
       displayItems(items, collection, 'collection');
     } catch (error) {
       console.error('Fetch error:', error);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="title">${item.title}</p>
               <p class="family">${item.family}</p>
               <img src="${item.imageUrl}" alt="${item.fullName}">
-              <button>${type === 'collection' ? 'Add to Favorites' : 'Remove from Favorites'}</button>
+              <button>${type === 'collection' ? '💚' : '🚫'}</button>
           `;
       itemCard.querySelector('button').addEventListener('click', () => {
         if (type === 'collection') {
